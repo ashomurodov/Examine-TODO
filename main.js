@@ -116,7 +116,8 @@ formOverlay.addEventListener("submit", (e) => {
 
 function editTodo(index) {
   editItemId = index;
-  overlayInput.value = todos[editItemId].todoText
+  overlayInput.value = todos[editItemId].todoText;
+  console.log(overlayInput.value);
   open();
 }
 
