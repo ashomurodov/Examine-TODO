@@ -5,6 +5,8 @@ const formError = document.getElementById("form-error");
 const formErrorOvy = document.getElementById("form-error-ovy");
 let editItemId;
 
+const clear = document.getElementById("clearAll");
+
 const formOverlay = document.getElementById("form-overlay");
 const overlay = document.querySelector(".overlay");
 
@@ -56,6 +58,12 @@ function showTodos() {
     todoList.appendChild(todo);
   });
 }
+
+clear.addEventListener("click", () => {
+  todoList.innerHTML = "";
+  todos = [];
+  setItem();
+});
 
 function setItem() {
   localStorage.setItem("list", JSON.stringify(todos));

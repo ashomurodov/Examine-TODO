@@ -124,6 +124,13 @@ li.todo {
   cursor: pointer;
 }
 
+
+#clearAll{
+    padding: 10px 12px;
+    background-color: #55ccf0;
+    position: absolute;
+    bottom: 70px;
+}
 button {
   transition: all 0.2s ease-in-out;
 }
