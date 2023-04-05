@@ -92,6 +92,10 @@ function showError() {
   }, 1000);
 }
 
+overlay.addEventListener("dblclick", () => {
+  close();
+});
+
 // edit form
 formOverlay.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -112,6 +116,7 @@ formOverlay.addEventListener("submit", (e) => {
 
 function editTodo(index) {
   editItemId = index;
+  overlayInput.value = todos[editItemId].todoText
   open();
 }
 
